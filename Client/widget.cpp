@@ -87,6 +87,7 @@ ui->errorLabel->clear();
 	if (ret==-1){
 		sprintf(errmsg,"send ret = %d ",ret);
 		this->ui->txtStatus->append(errmsg);
+		//this->ui->txtStatus->setTextColor("red");
 	}
 
 }
@@ -116,7 +117,8 @@ void Widget::readFormServer()
 
 void Widget::displayError(QAbstractSocket::SocketError)
 {
-	this->ui->errorLabel->setText(this->client->errorString());
+	//this->ui->errorLabel->setText(this->client->errorString());
+	this->ui->txtStatus->append(this->client->errorString());
 }
 void Widget::setlocalip ()
 {

@@ -69,7 +69,7 @@ public:
         Widget->setWindowIcon(icon);
         errorLabel = new QLabel(Widget);
         errorLabel->setObjectName(QString::fromUtf8("errorLabel"));
-        errorLabel->setGeometry(QRect(250, 440, 251, 20));
+        errorLabel->setGeometry(QRect(80, 440, 251, 20));
         lineHost = new QLineEdit(Widget);
         lineHost->setObjectName(QString::fromUtf8("lineHost"));
         lineHost->setGeometry(QRect(510, 40, 181, 28));
@@ -100,6 +100,8 @@ public:
         font.setBold(true);
         font.setWeight(75);
         txtHasSend->setFont(font);
+        txtHasSend->setStyleSheet(QString::fromUtf8("background-color: rgb(170, 170, 255);\n"
+"color: rgb(85, 0, 0);"));
         txtHasSend->setReadOnly(true);
         label_3 = new QLabel(Widget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
@@ -108,6 +110,7 @@ public:
         txtStatus = new QTextEdit(Widget);
         txtStatus->setObjectName(QString::fromUtf8("txtStatus"));
         txtStatus->setGeometry(QRect(80, 470, 421, 91));
+        txtStatus->setStyleSheet(QString::fromUtf8("color: rgb(255, 0, 0);"));
         txtStatus->setReadOnly(true);
         fromLabel = new QLabel(Widget);
         fromLabel->setObjectName(QString::fromUtf8("fromLabel"));
@@ -116,6 +119,8 @@ public:
         fromTextEdit->setObjectName(QString::fromUtf8("fromTextEdit"));
         fromTextEdit->setGeometry(QRect(80, 80, 421, 181));
         fromTextEdit->setFont(font);
+        fromTextEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(170, 170, 255);\n"
+"color: rgb(0, 85, 0);"));
         fromTextEdit->setTextInteractionFlags(Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
         toLabel = new QLabel(Widget);
         toLabel->setObjectName(QString::fromUtf8("toLabel"));
