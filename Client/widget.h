@@ -5,6 +5,7 @@
 #include <QtNetwork>
 #include <QString>
 #include <QListWidgetItem>
+ #include <QAbstractButton>
 using namespace std;
 
 namespace Ui {
@@ -40,6 +41,7 @@ private slots:
        void rcu();
 	void rlk();
 	void xl();
+	void sp();
 };
 
 #endif // WIDGET_H

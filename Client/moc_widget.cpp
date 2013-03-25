@@ -22,7 +22,7 @@ static const uint qt_meta_data_Widget[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      13,   14, // methods
+      14,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -43,6 +43,7 @@ static const uint qt_meta_data_Widget[] = {
      180,    7,    7,    7, 0x08,
      186,    7,    7,    7, 0x08,
      192,    7,    7,    7, 0x08,
+     197,    7,    7,    7, 0x08,
 
        0        // eod
 };
@@ -53,7 +54,7 @@ static const char qt_meta_stringdata_Widget[] = {
     "displayError(QAbstractSocket::SocketError)\0"
     "setlocalip()\0id\0setip(QListWidgetItem*)\0"
     "call1()\0call2()\0readtime()\0readti()\0"
-    "rcu()\0rlk()\0xl()\0"
+    "rcu()\0rlk()\0xl()\0sp()\0"
 };
 
 void Widget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -75,6 +76,7 @@ void Widget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 10: _t->rcu(); break;
         case 11: _t->rlk(); break;
         case 12: _t->xl(); break;
+        case 13: _t->sp(); break;
         default: ;
         }
     }
@@ -112,9 +114,9 @@ int Widget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 13)
+        if (_id < 14)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 13;
+        _id -= 14;
     }
     return _id;
 }

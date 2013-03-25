@@ -18,6 +18,7 @@
 #include <QtGui/QLineEdit>
 #include <QtGui/QListWidget>
 #include <QtGui/QPushButton>
+#include <QtGui/QRadioButton>
 #include <QtGui/QTextEdit>
 #include <QtGui/QWidget>
 
@@ -58,6 +59,9 @@ public:
     QLabel *label_7;
     QLabel *label_12;
     QLabel *label_13;
+    QRadioButton *rbtSend;
+    QRadioButton *rbtOnlyShow;
+    QPushButton *btnSP_2;
 
     void setupUi(QWidget *Widget)
     {
@@ -78,7 +82,7 @@ public:
         linPort->setGeometry(QRect(710, 40, 129, 28));
         requestPushButton = new QPushButton(Widget);
         requestPushButton->setObjectName(QString::fromUtf8("requestPushButton"));
-        requestPushButton->setGeometry(QRect(370, 370, 128, 28));
+        requestPushButton->setGeometry(QRect(370, 430, 128, 28));
         label = new QLabel(Widget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(520, 20, 21, 18));
@@ -127,7 +131,7 @@ public:
         toLabel->setGeometry(QRect(10, 290, 61, 18));
         toTextEdit = new QTextEdit(Widget);
         toTextEdit->setObjectName(QString::fromUtf8("toTextEdit"));
-        toTextEdit->setGeometry(QRect(80, 280, 421, 81));
+        toTextEdit->setGeometry(QRect(80, 280, 421, 141));
         QFont font1;
         font1.setFamily(QString::fromUtf8("\346\226\207\346\263\211\351\251\277\347\255\211\345\256\275\346\255\243\351\273\221"));
         toTextEdit->setFont(font1);
@@ -191,7 +195,17 @@ public:
         label_12->setGeometry(QRect(730, 430, 71, 20));
         label_13 = new QLabel(Widget);
         label_13->setObjectName(QString::fromUtf8("label_13"));
-        label_13->setGeometry(QRect(720, 240, 71, 20));
+        label_13->setGeometry(QRect(730, 240, 71, 20));
+        rbtSend = new QRadioButton(Widget);
+        rbtSend->setObjectName(QString::fromUtf8("rbtSend"));
+        rbtSend->setGeometry(QRect(710, 140, 113, 25));
+        rbtSend->setChecked(true);
+        rbtOnlyShow = new QRadioButton(Widget);
+        rbtOnlyShow->setObjectName(QString::fromUtf8("rbtOnlyShow"));
+        rbtOnlyShow->setGeometry(QRect(710, 170, 113, 25));
+        btnSP_2 = new QPushButton(Widget);
+        btnSP_2->setObjectName(QString::fromUtf8("btnSP_2"));
+        btnSP_2->setGeometry(QRect(730, 340, 98, 30));
 
         retranslateUi(Widget);
 
@@ -231,6 +245,9 @@ public:
         label_7->setText(QApplication::translate("Widget", "S2", 0, QApplication::UnicodeUTF8));
         label_12->setText(QApplication::translate("Widget", "(FCV\346\227\240\346\225\210)", 0, QApplication::UnicodeUTF8));
         label_13->setText(QApplication::translate("Widget", "(FCV\346\227\240\346\225\210)", 0, QApplication::UnicodeUTF8));
+        rbtSend->setText(QApplication::translate("Widget", "\347\234\237\345\256\236\345\217\221\351\200\201", 0, QApplication::UnicodeUTF8));
+        rbtOnlyShow->setText(QApplication::translate("Widget", "\344\273\205\346\230\276\347\244\272\346\212\245\346\226\207", 0, QApplication::UnicodeUTF8));
+        btnSP_2->setText(QApplication::translate("Widget", "\350\257\273\345\215\225\347\202\271\344\277\241\346\201\257", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

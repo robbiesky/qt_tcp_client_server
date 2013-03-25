@@ -26,8 +26,11 @@ Widget::Widget(QWidget *parent) :
 	connect(this->ui->btnRCU,SIGNAL(clicked()),this,SLOT(rcu()));
 	connect(this->ui->btnRLK,SIGNAL(clicked()),this,SLOT(rlk()));
 	connect(this->ui->btnXL,SIGNAL(clicked()),this,SLOT(xl()));
+	connect(this->ui->btnSP_2,SIGNAL(clicked()),this,SLOT(sp()));
 	this->ui->lstIP->addItem ("localhost");
-	this->ui->lstIP->addItem ("192.168.1.189");
+	this->ui->lstIP->addItem ("192.168.1.143");
+	this->ui->lineHost->setText("192.168.1.143");
+	this->ui->linPort->setText("10001");
 	this->ui->lstIP->setCurrentRow (1);
 	this->ui->toTextEdit->setText("10 49 01 00 4A 16");
 }
@@ -50,7 +53,7 @@ void Widget::sendToServer()
 	//get host and port
 	QString ip = this->ui->lineHost->text();
 	int port =this->ui->linPort->text ().toInt ();
-ui->errorLabel->clear();
+	this->ui->errorLabel->clear();
 	this->client->connectToHost(ip, port);
 	ui->txtHasSend->clear ();
 	QString str = this->ui->toTextEdit->toPlainText();
@@ -82,12 +85,15 @@ ui->errorLabel->clear();
 		}
 	}
 	//show sended dat
-	ui->txtHasSend->append (byt);
-	ret=this->client->write(/*str3*/dat);
-	if (ret==-1){
-		sprintf(errmsg,"send ret = %d ",ret);
-		this->ui->txtStatus->append(errmsg);
-		//this->ui->txtStatus->setTextColor("red");
+	if(ui->rbtSend->isChecked()){
+		ui->txtHasSend->append (byt);
+
+		ret=this->client->write(/*str3*/dat);
+		if (ret==-1){
+			sprintf(errmsg,"send ret = %d ",ret);
+			this->ui->txtStatus->append(errmsg);
+			//this->ui->txtStatus->setTextColor("red");
+		}
 	}
 
 }
@@ -130,12 +136,13 @@ void Widget::setip(QListWidgetItem* id)
 	this->ui->lineHost->text ().clear ();
 	this->ui->lineHost->setText(id->text ());
 }
+/// call 1 class data
 void Widget::call1()
 {
 	this->ui->toTextEdit->setText("10 5A 01 00 5B 16");
 	sendToServer();
 }
-
+// call 2 class data
 void Widget::call2()
 {
 	this->ui->toTextEdit->setText("10 7B 01 00 7C 16");
@@ -149,7 +156,11 @@ void Widget::readtime()
 //读电量
 void Widget::readti()
 {
-	this->ui->toTextEdit->setText("68 15 15 68 53 01 00 78 01 06 01 00 1F 2C 2F 00 00 01 07 04 00 01 01 07 04 67 16");
+	this->ui->toTextEdit->setText("68 15 15 68 "
+				      "53 01 00 78 01 06 01 00 1F 01 10 "
+				      "00 00 01 0b 0c "
+				      "00 01 01 0b 0c "
+				      "67 16");
 	sendToServer();
 }
 void Widget::rcu()
@@ -165,5 +176,13 @@ void Widget::rlk()
 void Widget::xl()
 {
 	this->ui->toTextEdit->setText("68 15 15 68 53 01 00 AE 01 06 01 00 1F 2C 2F 00 00 01 07 04 00 01 01 07 04 9D 16 ");
+	sendToServer();
+}
+void Widget::sp()
+{
+	this->ui->toTextEdit->setText("68 13 13 68 53 01 00 66 02 06 01 00 33 \n"
+				      "00 00 05 0c 0c \n"
+				      "3b 17 05 0c 0c \n"
+				      "9D 16 \n");
 	sendToServer();
 }
