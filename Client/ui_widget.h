@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'widget.ui'
 **
-** Created by: Qt User Interface Compiler version 4.8.3
+** Created by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -85,7 +85,7 @@ public:
         requestPushButton->setGeometry(QRect(370, 430, 128, 28));
         label = new QLabel(Widget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(520, 20, 21, 18));
+        label->setGeometry(QRect(520, 20, 81, 18));
         label_2 = new QLabel(Widget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(710, 10, 31, 18));
@@ -138,7 +138,7 @@ public:
         toTextEdit->setHtml(QString::fromUtf8("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'\346\226\207\346\263\211\351\251\277\347\255\211\345\256\275\346\255\243\351\273\221'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'\346\226\207\346\263\211\351\251\277\347\255\211\345\256\275\346\255\243\351\273\221'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'\345\256\213\344\275\223'; font-size:9pt;\"><br /></p></body></html>"));
         toTextEdit->setAcceptRichText(false);
         btnCall1 = new QPushButton(Widget);
@@ -222,7 +222,7 @@ public:
         lineHost->setText(QApplication::translate("Widget", "192.168.1.189", 0, QApplication::UnicodeUTF8));
         linPort->setText(QApplication::translate("Widget", "10005", 0, QApplication::UnicodeUTF8));
         requestPushButton->setText(QApplication::translate("Widget", "\345\217\221\351\200\201", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("Widget", "IP", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("Widget", "\346\234\215\345\212\241\345\231\250IP", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("Widget", "Port", 0, QApplication::UnicodeUTF8));
         btnLocal->setText(QApplication::translate("Widget", "\350\256\276\347\275\256IP", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("Widget", "\345\217\221\351\200\201", 0, QApplication::UnicodeUTF8));

@@ -31,6 +31,7 @@ private slots:
     void readFormClient();
     void sendToClient();
     void acceptConnection();
+    void on_btnListen_clicked();
 };
 
 #endif // WIDGET_H

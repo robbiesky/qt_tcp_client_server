@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'widget.ui'
 **
-** Created by: Qt User Interface Compiler version 4.8.3
+** Created by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -13,14 +13,11 @@
 #include <QtGui/QAction>
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
-#include <QtGui/QGridLayout>
-#include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
+#include <QtGui/QLineEdit>
 #include <QtGui/QPushButton>
-#include <QtGui/QSpacerItem>
 #include <QtGui/QTextEdit>
-#include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -28,110 +25,56 @@ QT_BEGIN_NAMESPACE
 class Ui_Widget
 {
 public:
-    QGridLayout *gridLayout;
-    QVBoxLayout *verticalLayout;
-    QHBoxLayout *horizontalLayout;
+    QLabel *errorLabel;
+    QPushButton *btnListen;
+    QLineEdit *linePort;
+    QLabel *label_2;
     QLabel *fromLabel;
-    QTextEdit *fromTextEdit;
-    QSpacerItem *verticalSpacer;
-    QHBoxLayout *horizontalLayout_2;
+    QLabel *lblStat;
     QLabel *toLabel;
     QTextEdit *toTextEdit;
-    QSpacerItem *verticalSpacer_2;
-    QHBoxLayout *horizontalLayout_3;
-    QSpacerItem *horizontalSpacer;
     QPushButton *replyPushButton;
-    QSpacerItem *horizontalSpacer_2;
-    QSpacerItem *verticalSpacer_3;
-    QLabel *errorLabel;
+    QTextEdit *fromTextEdit;
 
     void setupUi(QWidget *Widget)
     {
         if (Widget->objectName().isEmpty())
             Widget->setObjectName(QString::fromUtf8("Widget"));
-        Widget->resize(479, 352);
+        Widget->resize(655, 508);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/img/titli.png"), QSize(), QIcon::Normal, QIcon::Off);
         Widget->setWindowIcon(icon);
-        gridLayout = new QGridLayout(Widget);
-        gridLayout->setSpacing(6);
-        gridLayout->setContentsMargins(11, 11, 11, 11);
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setSpacing(6);
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setSpacing(6);
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        fromLabel = new QLabel(Widget);
-        fromLabel->setObjectName(QString::fromUtf8("fromLabel"));
-
-        horizontalLayout->addWidget(fromLabel);
-
-        fromTextEdit = new QTextEdit(Widget);
-        fromTextEdit->setObjectName(QString::fromUtf8("fromTextEdit"));
-        fromTextEdit->setTextInteractionFlags(Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
-
-        horizontalLayout->addWidget(fromTextEdit);
-
-
-        verticalLayout->addLayout(horizontalLayout);
-
-        verticalSpacer = new QSpacerItem(20, 17, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer);
-
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setSpacing(6);
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        toLabel = new QLabel(Widget);
-        toLabel->setObjectName(QString::fromUtf8("toLabel"));
-
-        horizontalLayout_2->addWidget(toLabel);
-
-        toTextEdit = new QTextEdit(Widget);
-        toTextEdit->setObjectName(QString::fromUtf8("toTextEdit"));
-
-        horizontalLayout_2->addWidget(toTextEdit);
-
-
-        verticalLayout->addLayout(horizontalLayout_2);
-
-        verticalSpacer_2 = new QSpacerItem(20, 17, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer_2);
-
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setSpacing(6);
-        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        horizontalSpacer = new QSpacerItem(68, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_3->addItem(horizontalSpacer);
-
-        replyPushButton = new QPushButton(Widget);
-        replyPushButton->setObjectName(QString::fromUtf8("replyPushButton"));
-
-        horizontalLayout_3->addWidget(replyPushButton);
-
-        horizontalSpacer_2 = new QSpacerItem(78, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_3->addItem(horizontalSpacer_2);
-
-
-        verticalLayout->addLayout(horizontalLayout_3);
-
-        verticalSpacer_3 = new QSpacerItem(20, 17, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer_3);
-
-
-        gridLayout->addLayout(verticalLayout, 0, 0, 1, 1);
-
         errorLabel = new QLabel(Widget);
         errorLabel->setObjectName(QString::fromUtf8("errorLabel"));
-
-        gridLayout->addWidget(errorLabel, 1, 0, 1, 1);
-
+        errorLabel->setGeometry(QRect(10, 527, 16, 17));
+        btnListen = new QPushButton(Widget);
+        btnListen->setObjectName(QString::fromUtf8("btnListen"));
+        btnListen->setGeometry(QRect(480, 69, 80, 28));
+        linePort = new QLineEdit(Widget);
+        linePort->setObjectName(QString::fromUtf8("linePort"));
+        linePort->setGeometry(QRect(480, 36, 127, 27));
+        label_2 = new QLabel(Widget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setGeometry(QRect(480, 13, 79, 17));
+        fromLabel = new QLabel(Widget);
+        fromLabel->setObjectName(QString::fromUtf8("fromLabel"));
+        fromLabel->setGeometry(QRect(12, 13, 71, 17));
+        lblStat = new QLabel(Widget);
+        lblStat->setObjectName(QString::fromUtf8("lblStat"));
+        lblStat->setGeometry(QRect(479, 104, 53, 17));
+        toLabel = new QLabel(Widget);
+        toLabel->setObjectName(QString::fromUtf8("toLabel"));
+        toLabel->setGeometry(QRect(20, 190, 54, 17));
+        toTextEdit = new QTextEdit(Widget);
+        toTextEdit->setObjectName(QString::fromUtf8("toTextEdit"));
+        toTextEdit->setGeometry(QRect(10, 210, 441, 131));
+        replyPushButton = new QPushButton(Widget);
+        replyPushButton->setObjectName(QString::fromUtf8("replyPushButton"));
+        replyPushButton->setGeometry(QRect(154, 370, 80, 28));
+        fromTextEdit = new QTextEdit(Widget);
+        fromTextEdit->setObjectName(QString::fromUtf8("fromTextEdit"));
+        fromTextEdit->setGeometry(QRect(12, 39, 441, 141));
+        fromTextEdit->setTextInteractionFlags(Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
 
         retranslateUi(Widget);
 
@@ -140,11 +83,15 @@ public:
 
     void retranslateUi(QWidget *Widget)
     {
-        Widget->setWindowTitle(QApplication::translate("Widget", "Server", 0, QApplication::UnicodeUTF8));
+        Widget->setWindowTitle(QApplication::translate("Widget", "\346\234\215\345\212\241\345\231\250,\347\233\221\345\220\254,\347\255\211\345\276\205\345\256\242\346\210\267\347\253\257\351\223\276\346\216\245", 0, QApplication::UnicodeUTF8));
+        errorLabel->setText(QString());
+        btnListen->setText(QApplication::translate("Widget", "\347\233\221\345\220\254", 0, QApplication::UnicodeUTF8));
+        linePort->setText(QApplication::translate("Widget", "10009", 0, QApplication::UnicodeUTF8));
+        label_2->setText(QApplication::translate("Widget", "\345\274\200\346\224\276\347\232\204\347\253\257\345\217\243\345\217\267", 0, QApplication::UnicodeUTF8));
         fromLabel->setText(QApplication::translate("Widget", "Form Client:", 0, QApplication::UnicodeUTF8));
+        lblStat->setText(QApplication::translate("Widget", "\346\262\241\346\234\211\346\211\223\345\274\200", 0, QApplication::UnicodeUTF8));
         toLabel->setText(QApplication::translate("Widget", "To Client:", 0, QApplication::UnicodeUTF8));
         replyPushButton->setText(QApplication::translate("Widget", "Reply", 0, QApplication::UnicodeUTF8));
-        errorLabel->setText(QString());
     } // retranslateUi
 
 };
