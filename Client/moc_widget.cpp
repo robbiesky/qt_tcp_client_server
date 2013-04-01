@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'widget.h'
 **
-** Created by: The Qt Meta Object Compiler version 63 (Qt 4.8.3)
+** Created by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -10,7 +10,7 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'widget.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 63
-#error "This file was generated using the moc from 4.8.3. It"
+#error "This file was generated using the moc from 4.8.4. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -22,7 +22,7 @@ static const uint qt_meta_data_Widget[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      14,   14, // methods
+      18,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -38,12 +38,16 @@ static const uint qt_meta_data_Widget[] = {
      120,  117,    7,    7, 0x08,
      144,    7,    7,    7, 0x08,
      152,    7,    7,    7, 0x08,
-     160,    7,    7,    7, 0x08,
-     171,    7,    7,    7, 0x08,
-     180,    7,    7,    7, 0x08,
-     186,    7,    7,    7, 0x08,
+     162,    7,    7,    7, 0x08,
+     170,    7,    7,    7, 0x08,
+     181,    7,    7,    7, 0x08,
      192,    7,    7,    7, 0x08,
-     197,    7,    7,    7, 0x08,
+     201,    7,    7,    7, 0x08,
+     214,    7,    7,    7, 0x08,
+     220,    7,    7,    7, 0x08,
+     226,    7,    7,    7, 0x08,
+     231,    7,    7,    7, 0x08,
+     236,    7,    7,    7, 0x08,
 
        0        // eod
 };
@@ -53,8 +57,9 @@ static const char qt_meta_stringdata_Widget[] = {
     "sendToServer()\0readFormServer()\0"
     "displayError(QAbstractSocket::SocketError)\0"
     "setlocalip()\0id\0setip(QListWidgetItem*)\0"
-    "call1()\0call2()\0readtime()\0readti()\0"
-    "rcu()\0rlk()\0xl()\0sp()\0"
+    "call1()\0call1_2()\0call2()\0readtime()\0"
+    "syn_time()\0readti()\0readti_all()\0rcu()\0"
+    "rlk()\0xl()\0sp()\0sp_ta()\0"
 };
 
 void Widget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -70,13 +75,17 @@ void Widget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 4: _t->setlocalip(); break;
         case 5: _t->setip((*reinterpret_cast< QListWidgetItem*(*)>(_a[1]))); break;
         case 6: _t->call1(); break;
-        case 7: _t->call2(); break;
-        case 8: _t->readtime(); break;
-        case 9: _t->readti(); break;
-        case 10: _t->rcu(); break;
-        case 11: _t->rlk(); break;
-        case 12: _t->xl(); break;
-        case 13: _t->sp(); break;
+        case 7: _t->call1_2(); break;
+        case 8: _t->call2(); break;
+        case 9: _t->readtime(); break;
+        case 10: _t->syn_time(); break;
+        case 11: _t->readti(); break;
+        case 12: _t->readti_all(); break;
+        case 13: _t->rcu(); break;
+        case 14: _t->rlk(); break;
+        case 15: _t->xl(); break;
+        case 16: _t->sp(); break;
+        case 17: _t->sp_ta(); break;
         default: ;
         }
     }
@@ -114,9 +123,9 @@ int Widget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 14)
+        if (_id < 18)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 14;
+        _id -= 18;
     }
     return _id;
 }

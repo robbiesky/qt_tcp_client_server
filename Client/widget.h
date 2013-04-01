@@ -28,20 +28,24 @@ private:
     quint16 blockSize;
 
 private slots:
-    void clickRequestButton();
-    void sendToServer();
-    void readFormServer();
-    void displayError(QAbstractSocket::SocketError);
-    void setlocalip();
-    void setip(QListWidgetItem *id);
-    void call1();
-     void call2();
-      void readtime();
-      void readti();
-       void rcu();
+	void clickRequestButton();
+	void sendToServer();
+	void readFormServer();
+	void displayError(QAbstractSocket::SocketError);
+	void setlocalip();
+	void setip(QListWidgetItem *id);
+	void call1();
+	void call1_2();
+	void call2();
+	void readtime();
+	void syn_time();
+	void readti();
+	void readti_all();
+	void rcu();
 	void rlk();
 	void xl();
 	void sp();
+	void sp_ta();
 };
 
 #endif // WIDGET_H

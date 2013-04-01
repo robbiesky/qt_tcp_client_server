@@ -62,6 +62,10 @@ public:
     QRadioButton *rbtSend;
     QRadioButton *rbtOnlyShow;
     QPushButton *btnSP_2;
+    QPushButton *btnCall1_2;
+    QPushButton *btnReadTI_all;
+    QPushButton *btnSynTime;
+    QPushButton *btnSP_TA;
 
     void setupUi(QWidget *Widget)
     {
@@ -176,16 +180,16 @@ public:
         label_4->setGeometry(QRect(590, 240, 16, 20));
         btnReadTI = new QPushButton(Widget);
         btnReadTI->setObjectName(QString::fromUtf8("btnReadTI"));
-        btnReadTI->setGeometry(QRect(620, 340, 98, 30));
+        btnReadTI->setGeometry(QRect(620, 310, 131, 30));
         label_5 = new QLabel(Widget);
         label_5->setObjectName(QString::fromUtf8("label_5"));
-        label_5->setGeometry(QRect(590, 300, 16, 20));
+        label_5->setGeometry(QRect(590, 280, 16, 20));
         btnXL = new QPushButton(Widget);
         btnXL->setObjectName(QString::fromUtf8("btnXL"));
-        btnXL->setGeometry(QRect(730, 300, 98, 30));
+        btnXL->setGeometry(QRect(760, 310, 98, 30));
         btnReadTime = new QPushButton(Widget);
         btnReadTime->setObjectName(QString::fromUtf8("btnReadTime"));
-        btnReadTime->setGeometry(QRect(620, 300, 98, 30));
+        btnReadTime->setGeometry(QRect(620, 280, 131, 30));
         label_7 = new QLabel(Widget);
         label_7->setObjectName(QString::fromUtf8("label_7"));
         label_7->setGeometry(QRect(530, 230, 41, 41));
@@ -205,7 +209,19 @@ public:
         rbtOnlyShow->setGeometry(QRect(710, 170, 113, 25));
         btnSP_2 = new QPushButton(Widget);
         btnSP_2->setObjectName(QString::fromUtf8("btnSP_2"));
-        btnSP_2->setGeometry(QRect(730, 340, 98, 30));
+        btnSP_2->setGeometry(QRect(760, 350, 111, 30));
+        btnCall1_2 = new QPushButton(Widget);
+        btnCall1_2->setObjectName(QString::fromUtf8("btnCall1_2"));
+        btnCall1_2->setGeometry(QRect(740, 470, 98, 30));
+        btnReadTI_all = new QPushButton(Widget);
+        btnReadTI_all->setObjectName(QString::fromUtf8("btnReadTI_all"));
+        btnReadTI_all->setGeometry(QRect(620, 340, 131, 30));
+        btnSynTime = new QPushButton(Widget);
+        btnSynTime->setObjectName(QString::fromUtf8("btnSynTime"));
+        btnSynTime->setGeometry(QRect(760, 280, 91, 30));
+        btnSP_TA = new QPushButton(Widget);
+        btnSP_TA->setObjectName(QString::fromUtf8("btnSP_TA"));
+        btnSP_TA->setGeometry(QRect(760, 380, 98, 30));
 
         retranslateUi(Widget);
 
@@ -217,7 +233,7 @@ public:
 
     void retranslateUi(QWidget *Widget)
     {
-        Widget->setWindowTitle(QApplication::translate("Widget", "Client", 0, QApplication::UnicodeUTF8));
+        Widget->setWindowTitle(QApplication::translate("Widget", "\345\256\242\346\210\267\347\253\257.\344\270\273\345\212\250\351\223\276\346\216\245\345\210\260\346\234\215\345\212\241\345\231\250", 0, QApplication::UnicodeUTF8));
         errorLabel->setText(QString());
         lineHost->setText(QApplication::translate("Widget", "192.168.1.189", 0, QApplication::UnicodeUTF8));
         linPort->setText(QApplication::translate("Widget", "10005", 0, QApplication::UnicodeUTF8));
@@ -228,7 +244,7 @@ public:
         label_3->setText(QApplication::translate("Widget", "\345\217\221\351\200\201", 0, QApplication::UnicodeUTF8));
         fromLabel->setText(QApplication::translate("Widget", "\346\216\245\346\224\266", 0, QApplication::UnicodeUTF8));
         toLabel->setText(QApplication::translate("Widget", "\347\274\226\350\257\221\346\212\245\346\226\207", 0, QApplication::UnicodeUTF8));
-        btnCall1->setText(QApplication::translate("Widget", "\345\217\254\345\224\2441\347\272\247\346\225\260\346\215\256", 0, QApplication::UnicodeUTF8));
+        btnCall1->setText(QApplication::translate("Widget", "\345\217\254\345\224\2441\347\272\247\346\225\260\346\215\256(A)", 0, QApplication::UnicodeUTF8));
         btnCall2->setText(QApplication::translate("Widget", "\345\217\254\345\224\2442\347\272\247\346\225\260\346\215\256", 0, QApplication::UnicodeUTF8));
         btnRLK->setText(QApplication::translate("Widget", "\345\217\254\345\224\244\351\223\276\350\267\257\347\212\266\346\200\201", 0, QApplication::UnicodeUTF8));
         label_6->setText(QApplication::translate("Widget", "S3", 0, QApplication::UnicodeUTF8));
@@ -238,7 +254,7 @@ public:
         label_11->setText(QApplication::translate("Widget", "\351\224\231\350\257\257\347\212\266\346\200\201:", 0, QApplication::UnicodeUTF8));
         btnRCU->setText(QApplication::translate("Widget", "\345\244\215\344\275\215\351\223\276\350\267\257", 0, QApplication::UnicodeUTF8));
         label_4->setText(QApplication::translate("Widget", "0", 0, QApplication::UnicodeUTF8));
-        btnReadTI->setText(QApplication::translate("Widget", "\350\257\273\347\224\265\351\207\217", 0, QApplication::UnicodeUTF8));
+        btnReadTI->setText(QApplication::translate("Widget", "\350\257\273\347\224\265\351\207\217(4\344\270\252\346\200\273\347\224\265\351\207\217)", 0, QApplication::UnicodeUTF8));
         label_5->setText(QApplication::translate("Widget", "3", 0, QApplication::UnicodeUTF8));
         btnXL->setText(QApplication::translate("Widget", "\350\257\273\351\234\200\351\207\217", 0, QApplication::UnicodeUTF8));
         btnReadTime->setText(QApplication::translate("Widget", "\350\257\273\345\217\226\346\227\266\351\227\264", 0, QApplication::UnicodeUTF8));
@@ -247,7 +263,11 @@ public:
         label_13->setText(QApplication::translate("Widget", "(FCV\346\227\240\346\225\210)", 0, QApplication::UnicodeUTF8));
         rbtSend->setText(QApplication::translate("Widget", "\347\234\237\345\256\236\345\217\221\351\200\201", 0, QApplication::UnicodeUTF8));
         rbtOnlyShow->setText(QApplication::translate("Widget", "\344\273\205\346\230\276\347\244\272\346\212\245\346\226\207", 0, QApplication::UnicodeUTF8));
-        btnSP_2->setText(QApplication::translate("Widget", "\350\257\273\345\215\225\347\202\271\344\277\241\346\201\257", 0, QApplication::UnicodeUTF8));
+        btnSP_2->setText(QApplication::translate("Widget", "\350\257\273\345\215\225\347\202\271\344\277\241\346\201\257(\345\216\206\345\217\262)", 0, QApplication::UnicodeUTF8));
+        btnCall1_2->setText(QApplication::translate("Widget", "\345\217\254\345\224\2441\347\272\247\346\225\260\346\215\256(B)", 0, QApplication::UnicodeUTF8));
+        btnReadTI_all->setText(QApplication::translate("Widget", "\350\257\273\347\224\265\351\207\217(4\347\261\273\346\200\273+\345\210\206\346\227\266)", 0, QApplication::UnicodeUTF8));
+        btnSynTime->setText(QApplication::translate("Widget", "\350\256\276\347\275\256\346\227\266\351\227\264", 0, QApplication::UnicodeUTF8));
+        btnSP_TA->setText(QApplication::translate("Widget", "\350\257\273\345\215\225\347\202\271\344\277\241\346\201\257", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

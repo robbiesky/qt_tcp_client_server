@@ -74,7 +74,9 @@ public:
         fromTextEdit = new QTextEdit(Widget);
         fromTextEdit->setObjectName(QString::fromUtf8("fromTextEdit"));
         fromTextEdit->setGeometry(QRect(12, 39, 441, 141));
-        fromTextEdit->setTextInteractionFlags(Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
+        fromTextEdit->setUndoRedoEnabled(false);
+        fromTextEdit->setReadOnly(false);
+        fromTextEdit->setTextInteractionFlags(Qt::TextEditorInteraction);
 
         retranslateUi(Widget);
 
